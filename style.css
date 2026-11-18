@@ -1,5 +1,6 @@
 @import url('https://googleapis.com');
 
+
 :root {
   --hot-pink: #ff1493;
   --bubblegum: #ff69b4;
@@ -437,4 +438,17 @@ body {
   box-shadow: 0 2px 5px rgba(255, 20, 147, 0.4);
   font-size: 12px;
   margin: 4px;
+}
+
+/* Cut-Out Bookshelf Stickers */
+.shelf-sticker {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  filter: 
+    drop-shadow(2px 0 0 #ffffff)
+    drop-shadow(-2px 0 0 #ffffff)
+    drop-shadow(0 2px 0 #ffffff)
+    drop-shadow(0 -2px 0 #ffffff)
+    drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.5));
 }
