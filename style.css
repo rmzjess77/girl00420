@@ -235,7 +235,7 @@ body {
 /* Spine-Out Books Standing Side-by-Side */
 .book-item {
   position: relative;
-  width: 24px;
+  width: 30px;
   height: 118px;
   transition: width 0.28s ease, transform 0.28s ease;
   margin-bottom: -1px;
