@@ -14,24 +14,14 @@ body {
   margin: 0;
   padding: 20px 10px;
   background-color: #ff2a9d;
-  background-image: 
-    radial-gradient(circle, #ffffff 1.5px, transparent 2px),
-    radial-gradient(circle, #ffe6f2 1px, transparent 1.5px),
-    radial-gradient(circle, #ffd700 1.2px, transparent 2px),
-    radial-gradient(circle, #ff99cc 2px, transparent 2.5px),
-    linear-gradient(135deg, #ff1493 0%, #ff69b4 35%, #d6006e 70%, #ff1493 100%);
-  background-size: 48px 48px, 32px 32px, 64px 64px, 24px 24px, 100% 100%;
-  animation: glitterShimmer 2.5s infinite linear;
+  background-image: url('glitter.gif');
+  background-repeat: repeat;
+  background-attachment: fixed;
   color: #3a0024;
   font-family: 'Courier Prime', monospace;
   font-size: 14px;
 }
 
-@keyframes glitterShimmer {
-  0% { background-position: 0px 0px, 10px 15px, 20px 5px, 5px 25px, 0 0; }
-  50% { background-position: 24px 12px, 26px 31px, 52px 37px, 17px 13px, 0 0; }
-  100% { background-position: 48px 24px, 42px 47px, 84px 69px, 29px 1px, 0 0; }
-}
 
 .marquee-bar {
   max-width: 960px;
