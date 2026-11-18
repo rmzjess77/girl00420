@@ -109,7 +109,7 @@
 
 
 
-            <div class="box" id="bookshelf">
+                  <div class="box" id="bookshelf">
         <div class="box-header">
           <span>📜 My Virtual Bookshelf</span>
           <span class="window-controls">[_][□][X]</span>
@@ -122,32 +122,53 @@
               <span class="shelf-label">★ CURRENTLY READING</span>
               <div class="book-item">
                 <span class="book-tooltip">the catcher in the rye</span>
-                <img src="https://placehold.co" alt="Book 1" class="book-cover">
+                <img src="https://placehold.co" alt="the catcher in the rye" class="book-cover">
               </div>
               <div class="book-item lean-left">
                 <span class="book-tooltip">looking for alaska</span>
-                <img src="https://placehold.co" alt="Book 2" class="book-cover">
+                <img src="https://placehold.co" alt="looking for alaska" class="book-cover">
+              </div>
+              <div class="shelf-trinket">
+                <span class="book-tooltip">reading fuel 🧋</span>
+                🧋
+              </div>
+              <div class="shelf-trinket">
+                <span class="book-tooltip">late night mood 🕯️</span>
+                🕯️
               </div>
             </div>
 
             <!-- MIDDLE SHELF: ALL-TIME FAVS -->
             <div class="shelf-tier">
               <span class="shelf-label">♡ ALL-TIME FAVS</span>
+              <div class="shelf-trinket">
+                <span class="book-tooltip">meow 🐈‍⬛</span>
+                🐈‍⬛
+              </div>
               <div class="book-item">
                 <span class="book-tooltip">perks of being a wallflower</span>
-                <img src="https://placehold.co" alt="Fav 1" class="book-cover">
+                <img src="https://placehold.co" alt="perks of being a wallflower" class="book-cover">
               </div>
               <div class="book-item">
                 <span class="book-tooltip">the bell jar</span>
-                <img src="https://placehold.co" alt="Fav 2" class="book-cover">
+                <img src="https://placehold.co" alt="the bell jar" class="book-cover">
               </div>
               <div class="book-item">
                 <span class="book-tooltip">gone girl</span>
-                <img src="https://placehold.co" alt="Fav 3" class="book-cover">
+                <img src="https://placehold.co" alt="gone girl" class="book-cover">
               </div>
               <div class="book-item lean-left">
                 <span class="book-tooltip">girl, interrupted</span>
-                <img src="https://placehold.co" alt="Fav 4" class="book-cover">
+                <img src="https://placehold.co" alt="girl, interrupted" class="book-cover">
+              </div>
+              <div class="shelf-trinket">
+                <span class="book-tooltip">burned CDs 💿</span>
+                <div class="cd-stack">
+                  <div class="cd-case" style="background: #ff69b4;"></div>
+                  <div class="cd-case" style="background: #00f0ff;"></div>
+                  <div class="cd-case" style="background: #ffd700;"></div>
+                  <div class="cd-case" style="background: #ff1493;"></div>
+                </div>
               </div>
             </div>
 
@@ -156,18 +177,53 @@
               <span class="shelf-label">✨ WANT TO READ</span>
               <div class="book-item">
                 <span class="book-tooltip">the picture of dorian gray</span>
-                <img src="https://placehold.co" alt="TBR 1" class="book-cover">
+                <img src="https://placehold.co" alt="the picture of dorian gray" class="book-cover">
               </div>
               <div class="book-item">
                 <span class="book-tooltip">the idiot</span>
-                <img src="https://placehold.co" alt="TBR 2" class="book-cover">
+                <img src="https://placehold.co" alt="the idiot" class="book-cover">
               </div>
               <div class="book-item lean-left">
                 <span class="book-tooltip">just kids</span>
-                <img src="https://placehold.co" alt="TBR 3" class="book-cover">
+                <img src="https://placehold.co" alt="just kids" class="book-cover">
+              </div>
+              <div class="shelf-trinket">
+                <span class="book-tooltip">lucky charm 🪩</span>
+                🪩
               </div>
             </div>
 
+          </div>
+        </div>
+      </div>
+
+      <div class="box" id="movies">
+        <div class="box-header">
+          <span>🎬 Top Movies &amp; Rewatches</span>
+          <span class="window-controls">[_][□][X]</span>
+        </div>
+        <div class="box-content">
+          <div class="movies-grid">
+            <div class="movie-card">
+              <img src="https://placehold.co" alt="Movie Poster" class="movie-poster">
+              <div class="movie-title">Movie Title 1</div>
+              <div class="movie-stars">★★★★★</div>
+            </div>
+            <div class="movie-card">
+              <img src="https://placehold.co" alt="Movie Poster" class="movie-poster">
+              <div class="movie-title">Movie Title 2</div>
+              <div class="movie-stars">★★★★★</div>
+            </div>
+            <div class="movie-card">
+              <img src="https://placehold.co" alt="Movie Poster" class="movie-poster">
+              <div class="movie-title">Movie Title 3</div>
+              <div class="movie-stars">★★★★½</div>
+            </div>
+            <div class="movie-card">
+              <img src="https://placehold.co" alt="Movie Poster" class="movie-poster">
+              <div class="movie-title">Movie Title 4</div>
+              <div class="movie-stars">★★★★★</div>
+            </div>
           </div>
         </div>
       </div>
@@ -200,19 +256,6 @@
       </div>
     </div>
   </div>
-
-  <script>
-    function showShelf(shelfName, clickedBtn) {
-      document.getElementById('shelf-current').classList.add('hidden');
-      document.getElementById('shelf-favs').classList.add('hidden');
-      document.getElementById('shelf-tbr').classList.add('hidden');
-      document.getElementById('shelf-' + shelfName).classList.remove('hidden');
-
-      const buttons = document.querySelectorAll('.tab-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-      clickedBtn.classList.add('active');
-    }
-  </script>
 
 </body>
 </html>
