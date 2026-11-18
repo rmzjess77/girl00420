@@ -120,18 +120,16 @@ body {
 }
 
 .mood-box {
-  background-color: #ffe0f0;
-  background-image: 
-    radial-gradient(ellipse at 20% 30%, #ff69b4 3px, #800040 4px, transparent 5px),
-    radial-gradient(ellipse at 70% 65%, #ff69b4 4px, #800040 5px, transparent 6px),
-    radial-gradient(ellipse at 45% 80%, #ff69b4 2.5px, #800040 3.5px, transparent 4.5px);
-  background-size: 45px 45px;
+  background-image: linear-gradient(rgba(255, 240, 248, 0.75), rgba(255, 240, 248, 0.75)), url('stripe.jpeg');
+  background-size: cover;
+  background-position: center;
   border: 2px dashed var(--hot-pink);
   border-radius: 8px;
   padding: 9px;
   margin-bottom: 12px;
   font-size: 13px;
   color: #4d0028;
+  font-weight: bold;
 }
 
 .contact-grid {
