@@ -232,36 +232,62 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Books Standing Side-by-Side on the Shelf */
+/* Spine-Out Books Standing Side-by-Side */
 .book-item {
   position: relative;
-  width: 74px;
-  transition: transform 0.22s ease;
+  width: 24px;
+  height: 118px;
+  transition: width 0.28s ease, transform 0.28s ease;
   margin-bottom: -1px;
+  cursor: pointer;
 }
 
+/* On Hover/Tap: Expand & Tilt to Show Full Cover */
 .book-item:hover {
-  transform: translateY(-10px) scale(1.06);
-  z-index: 10;
+  width: 78px;
+  transform: translateY(-10px) rotate(-3deg);
+  z-index: 20;
 }
 
-/* Subtle Leaning Book Effect for Realism */
+/* Leaning End-Book Effect */
 .book-item.lean-left {
-  transform: rotate(-5deg);
-  margin-left: 4px;
-}
-.book-item.lean-left:hover {
-  transform: translateY(-10px) rotate(0deg) scale(1.06);
+  transform: rotate(-6deg);
+  margin-left: 6px;
 }
 
-.book-cover {
-  width: 74px;
-  height: 112px;
+.book-item.lean-left:hover {
+  width: 78px;
+  transform: translateY(-10px) rotate(-2deg);
+}
+
+/* Book Spine Image (Visible by Default) */
+.book-spine {
+  width: 24px;
+  height: 118px;
   object-fit: cover;
   display: block;
-  border-radius: 2px 4px 4px 2px;
-  border-left: 3px solid rgba(255, 255, 255, 0.45);
-  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.45), 3px 2px 6px rgba(0, 0, 0, 0.65);
+  border-radius: 2px;
+  border-left: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: -1px 0 3px rgba(0, 0, 0, 0.45), 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Full Book Cover (Hidden Until Hover) */
+.book-cover {
+  display: none;
+  width: 78px;
+  height: 118px;
+  object-fit: cover;
+  border-radius: 2px 5px 5px 2px;
+  border-left: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.book-item:hover .book-spine {
+  display: none;
+}
+
+.book-item:hover .book-cover {
+  display: block;
 }
 
 /* Hover Tooltip Title */
@@ -269,7 +295,7 @@ body {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  bottom: 118px;
+  bottom: 124px;
   left: 50%;
   transform: translateX(-50%);
   background: #fff0f8;
@@ -289,7 +315,6 @@ body {
   visibility: visible;
   opacity: 1;
 }
-
 
 .hidden { display: none; }
 
