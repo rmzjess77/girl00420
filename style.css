@@ -452,3 +452,18 @@ body {
     drop-shadow(0 -2px 0 #ffffff)
     drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.5));
 }
+
+/* Crystal & Candle Cluster */
+.crystal-cluster {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 6px;
+}
+
+.crystal-cluster .shelf-sticker {
+  margin-left: -14px;
+}
+
+.crystal-cluster .shelf-sticker:first-child {
+  margin-left: 0;
+}
