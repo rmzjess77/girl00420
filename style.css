@@ -120,7 +120,7 @@ body {
 }
 
 .mood-box {
-  background-image: linear-gradient(rgba(255, 240, 248, 0.75), rgba(255, 240, 248, 0.75)), url('stripe.jpeg');
+  background-image: linear-gradient(rgba(255, 240, 248, 0.75), rgba(255, 240, 248, 0.4)), url('stripe.jpeg');
   background-size: cover;
   background-position: center;
   border: 2px dashed var(--hot-pink);
