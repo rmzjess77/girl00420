@@ -445,13 +445,9 @@ body {
   height: 55px;
   width: auto;
   object-fit: contain;
-  filter: 
-    drop-shadow(2px 0 0 #ffffff)
-    drop-shadow(-2px 0 0 #ffffff)
-    drop-shadow(0 2px 0 #ffffff)
-    drop-shadow(0 -2px 0 #ffffff)
-    drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.55));
 }
+
 
 /* Crystal & Candle Cluster */
 .crystal-cluster {
