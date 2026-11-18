@@ -120,17 +120,19 @@ body {
 }
 
 .mood-box {
-  background-image: linear-gradient(rgba(255, 240, 248, 0.65), rgba(255, 240, 248, 0.65)), url('mood.gif');
-  background-size: cover;
-  background-position: center;
+  background-color: #ffffff;
+  background-image: url('mood.gif');
+  background-repeat: repeat;
+  background-size: 90px auto;
   border: 2px dashed var(--hot-pink);
   border-radius: 8px;
-  padding: 9px;
+  padding: 10px;
   margin-bottom: 12px;
   font-size: 13px;
   color: #4d0028;
   font-weight: bold;
 }
+
 
 
 .contact-grid {
