@@ -235,7 +235,7 @@ body {
 /* Spine-Out Books Standing Side-by-Side */
 .book-item {
   position: relative;
-  width: 30px;
+  width: 20px;
   height: 118px;
   transition: width 0.28s ease, transform 0.28s ease;
   margin-bottom: -1px;
@@ -262,7 +262,7 @@ body {
 
 /* Book Spine Image (Visible by Default) */
 .book-spine {
-  width: 24px;
+  width: 20px;
   height: 118px;
   object-fit: cover;
   display: block;
