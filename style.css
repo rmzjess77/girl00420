@@ -121,7 +121,8 @@ body {
 
 .mood-box {
   background-image: linear-gradient(rgba(255, 240, 248, 0.65), rgba(255, 240, 248, 0.65)), url('mood.gif');
-  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
   border: 2px dashed var(--hot-pink);
   border-radius: 8px;
   padding: 9px;
@@ -130,6 +131,7 @@ body {
   color: #4d0028;
   font-weight: bold;
 }
+
 
 .contact-grid {
   display: grid;
