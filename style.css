@@ -242,9 +242,8 @@ body {
   cursor: pointer;
 }
 
-/* On Hover/Tap: Expand to Match Exact Cover Shape */
 .book-item:hover {
-  width: auto;
+  width: 78px;
   transform: translateY(-10px) rotate(-3deg);
   z-index: 20;
 }
@@ -256,7 +255,7 @@ body {
 }
 
 .book-item.lean-left:hover {
-  width: auto;
+  width: 78px;
   transform: translateY(-10px) rotate(-2deg);
 }
 
@@ -272,8 +271,8 @@ body {
 
 .book-cover {
   display: none;
+  width: 78px;
   height: 118px;
-  width: auto;
   object-fit: cover;
   border-radius: 2px 5px 5px 2px;
   border-left: 3px solid rgba(255, 255, 255, 0.5);
