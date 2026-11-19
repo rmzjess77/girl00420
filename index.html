@@ -287,7 +287,7 @@
 
   async function updateNowPlaying() {
     try {
-      // Corrected the endpoint to ws.audioscrobbler.com/2.0/ and fixed variable interpolation
+      // Use the official API root and specify the 'user.getrecenttracks' method
       const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${LASTFM_USER}&api_key=${LASTFM_API_KEY}&format=json&limit=1`;
       const res = await fetch(url);
       const data = await res.json();
