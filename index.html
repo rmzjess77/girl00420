@@ -281,6 +281,47 @@
       </div>
     </div>
   </div>
+<script>
+  const LASTFM_USER = "pissjess";
+  const LASTFM_API_KEY = "dd184c305823e9675d15bd493713493b";
+
+  async function updateNowPlaying() {
+    try {
+      const url = `https://audioscrobbler.com{LASTFM_USER}&api_key=${LASTFM_API_KEY}&format=json&limit=1`;
+      const res = await fetch(url);
+      const data = await res.json();
+      const track = data.recenttracks.track[0];
+
+      const isPlaying = track["@attr"] && track["@attr"].nowplaying === "true";
+      const title = track.name;
+      const artist = track.artist["#text"];
+      const art = track.image[2]["#text"] || "https://placehold.co♪";
+
+      document.getElementById("track-name").textContent = title;
+      document.getElementById("artist-name").textContent = artist;
+      document.getElementById("album-art").src = art;
+
+      const disc = document.getElementById("vinyl-disc");
+      const arm = document.getElementById("tonearm");
+      const status = document.getElementById("play-status");
+
+      if (isPlaying) {
+        disc.classList.add("spinning");
+        arm.classList.add("playing");
+        status.textContent = "🎶 SPINNING LIVE";
+      } else {
+        disc.classList.remove("spinning");
+        arm.classList.remove("playing");
+        status.textContent = "💿 LAST PLAYED";
+      }
+    } catch (err) {
+      console.error("Error fetching track:", err);
+    }
+  }
+
+  updateNowPlaying();
+  setInterval(updateNowPlaying, 15000); // Checks every 15 seconds
+</script>
 
 </body>
 </html>
