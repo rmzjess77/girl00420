@@ -62,29 +62,52 @@
 
       <div class="box" id="music">
         <div class="box-header">
-          <span>🎧 On Repeat</span>
-          <span class="window-controls">[▶]</span>
+    <span>💿 Now Spinning &amp; On Repeat</span>
+    <span class="window-controls">[_][□][X]</span>
+  </div>
+  <div class="box-content">
+    
+    <!-- Spinning Record Player -->
+    <div class="record-player">
+      <div class="turntable">
+        <div class="vinyl-disc" id="vinyl-disc">
+          <img id="album-art" src="https://placehold.co♪" alt="Album Art">
+          <div class="vinyl-hole"></div>
         </div>
-        <div class="box-content">
-          <div class="song-item">
-            <span class="song-title">01. Song Title Here</span>
-            <span class="song-artist">Artist Name — Album</span>
-          </div>
-          <div class="song-item">
-            <span class="song-title">02. Another Fav Track</span>
-            <span class="song-artist">Artist Name — Single</span>
-          </div>
-          <div class="song-item">
-            <span class="song-title">03. Late Night Drive Song</span>
-            <span class="song-artist">Artist Name — Album</span>
-          </div>
-          <div class="song-item">
-            <span class="song-title">04. 2000s Pop Throwback</span>
-            <span class="song-artist">Artist Name — Album</span>
-          </div>
-        </div>
+        <div class="tonearm" id="tonearm"></div>
+      </div>
+
+      <div class="now-playing-info">
+        <span class="status-pill" id="play-status">⏸ NOT SPINNING</span>
+        <div class="track-name" id="track-name">Loading Spotify...</div>
+        <div class="artist-name" id="artist-name">please wait ♡</div>
       </div>
     </div>
+
+    <!-- Current Favorite Songs List -->
+    <div class="fav-songs-header">★ CURRENT ROTATION ★</div>
+    <div class="song-list">
+      <div class="song-item">
+        <span class="song-title">01. Rosemary</span>
+        <span class="song-artist">Deftones — Koi No Yokan</span>
+      </div>
+      <div class="song-item">
+        <span class="song-title">02. Let It Happen</span>
+        <span class="song-artist">Tame Impala — Currents</span>
+      </div>
+      <div class="song-item">
+        <span class="song-title">03. Is It Really You?</span>
+        <span class="song-artist">Loathe — I Let It In and It Took Everything</span>
+      </div>
+      <div class="song-item">
+        <span class="song-title">04. New Flesh</span>
+        <span class="song-artist">Current Joys — Wild Heart</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
     <div class="right-col">
       <div class="network-banner">
