@@ -297,17 +297,17 @@
         return;
       }
 
-      // Fix 1: Grab the first track from the array using [0]
-      const track = data.recenttracks.track[0];
+      const tracks = data.recenttracks.track;
+      const track = Array.isArray(tracks) ? tracks[0] : tracks;
 
       const isPlaying = track["@attr"] && track["@attr"].nowplaying === "true";
       const title = track.name;
       const artist = track.artist["#text"];
-      
-      // Fix 2: Grab the large album art from the image array using [2]
-      const art = (track.image && track.image[2] && track.image[2]["#text"]) 
-        ? track.image[2]["#text"] 
-        : "https://placehold.co♪";
+
+      let art = "https://placehold.co♪";
+      if (track.image && track.image[2] && track.image[2]["#text"]) {
+        art = track.image[2]["#text"];
+      }
 
       document.getElementById("track-name").textContent = title;
       document.getElementById("artist-name").textContent = artist;
@@ -327,9 +327,8 @@
         status.textContent = "💿 LAST PLAYED";
       }
     } catch (err) {
-      console.error("Error fetching track:", err);
-      document.getElementById("track-name").textContent = "Connection Error";
-      document.getElementById("artist-name").textContent = "Check console or API key";
+      document.getElementById("track-name").textContent = "Error: " + err.message;
+      document.getElementById("artist-name").textContent = "Check Last.fm username/key";
     }
   }
 
