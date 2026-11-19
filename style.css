@@ -242,9 +242,9 @@ body {
   cursor: pointer;
 }
 
-/* On Hover/Tap: Expand & Tilt to Show Full Cover */
+/* On Hover/Tap: Expand to Match Exact Cover Shape */
 .book-item:hover {
-  width: 78px;
+  width: auto;
   transform: translateY(-10px) rotate(-3deg);
   z-index: 20;
 }
@@ -256,7 +256,7 @@ body {
 }
 
 .book-item.lean-left:hover {
-  width: 78px;
+  width: auto;
   transform: translateY(-10px) rotate(-2deg);
 }
 
@@ -269,19 +269,11 @@ body {
   border-left: 2px solid rgba(255, 255, 255, 0.35);
   box-shadow: -1px 0 3px rgba(0, 0, 0, 0.45), 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
-/* Custom Book Heights */
-.book-short  { height: 104px; }
-.book-tall   { height: 128px; }
 
-/* Custom Book Thicknesses (Widths) */
-.book-thin   { width: 18px; }
-.book-thick  { width: 32px; }
-
-/* Full Book Cover (Hidden Until Hover) */
 .book-cover {
   display: none;
-  width: 78px;
   height: 118px;
+  width: auto;
   object-fit: cover;
   border-radius: 2px 5px 5px 2px;
   border-left: 3px solid rgba(255, 255, 255, 0.5);
