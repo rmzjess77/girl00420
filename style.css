@@ -471,18 +471,20 @@ body {
 .crystal-cluster .shelf-sticker:first-child {
   margin-left: 0;
 }
-/* McBling Record Player */
 .record-player {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 14px;
-  background: linear-gradient(135deg, #fff0f8 0%, #ffd6eb 100%);
-  border: 2px dashed var(--hot-pink);
-  border-radius: 10px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  background: transparent;
+  border: none;
   padding: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
-
 .turntable {
   position: relative;
   width: 120px;
@@ -610,38 +612,27 @@ body {
   padding: 3px;
   margin-bottom: 6px;
 }
-/* Delicate Pink Lace Card for Current Rotation */
+/* Clean Borderless Current Rotation List */
 .song-list {
-  position: relative;
-  background-color: #fff5fa;
-  background-image: 
-    radial-gradient(#ffb6db 1.5px, transparent 1.5px),
-    radial-gradient(#ffd6eb 1.5px, #fff5fa 1.5px);
-  background-size: 16px 16px;
-  background-position: 0 0, 8px 8px;
-  border: 2px solid #ff85c2;
-  outline: 2px dotted #ff1493;
-  outline-offset: -5px;
-  border-radius: 12px;
-  padding: 12px 14px;
-  box-shadow: 0 3px 8px rgba(255, 20, 147, 0.2), inset 0 0 10px rgba(255, 182, 219, 0.5);
+  background: rgba(255, 255, 255, 0.75);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 8px 10px;
 }
 
 .song-item {
-  background: rgba(255, 255, 255, 0.85);
-  border-bottom: 1.5px dotted #ff69b4;
-  padding: 7px 8px;
-  border-radius: 6px;
-  margin-bottom: 4px;
+  border-bottom: 1px dashed #ff99cc;
+  padding: 7px 4px;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .song-item:last-child {
   border-bottom: none;
-  margin-bottom: 0;
 }
 
 .song-item:hover {
-  background: #ffffff;
+  background: #fff0f8;
+  border-radius: 6px;
   transform: translateX(3px);
 }
