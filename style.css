@@ -115,6 +115,36 @@ body {
 .window-controls { font-size: 11px; letter-spacing: 2px; }
 .box-content { padding: 14px; }
 
+/* White Lace Frame around Light Pink Box */
+.lace-box {
+  position: relative;
+  background-color: #ffe6f2 !important; /* Soft light pink background */
+  border: 14px solid transparent !important;
+  outline: none !important;
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.85), 0 6px 15px rgba(120, 0, 60, 0.35);
+  overflow: visible !important;
+}
+
+/* Crisp White Lace Overlay on the Border */
+.lace-box::after {
+  content: "";
+  position: absolute;
+  inset: -14px; /* Sits directly on top of the 14px border */
+  border: 18px solid transparent;
+  border-image-source: url('lace.png');
+  border-image-slice: 33% fill; /* Prevents tiny squished repeats */
+  border-image-repeat: round;
+  filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255, 105, 180, 0.6)); /* Forces lace pure white */
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Keeps the hot-pink header tucked neatly inside the lace frame */
+.lace-box .box-header {
+  border-radius: 10px 10px 0 0;
+}
+
 .profile-pic-wrap {
   display: flex;
   gap: 12px;
