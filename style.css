@@ -794,3 +794,41 @@ body {
 .box-content p strong {
   color: #ffe6f2 !important;
 }
+/* Clickable Song Rows with Stacked Title & Artist */
+.song-item {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  padding: 8px 24px 8px 6px !important;
+}
+
+.song-title {
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+  color: #ffffff !important;
+  margin-bottom: 2px;
+}
+
+.song-artist {
+  display: block;
+  font-size: 11.5px;
+  color: #ffd6eb !important;
+}
+
+/* Cute Baby-Pink Play Icon on the Right of Each Track */
+.song-item::after {
+  content: "▶";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  color: #ffb6db;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.song-item:hover::after {
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.25);
+}
