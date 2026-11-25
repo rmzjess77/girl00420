@@ -832,11 +832,3 @@ body {
   color: #ffffff;
   transform: translateY(-50%) scale(1.25);
 }
-/* Brighten the "my URL:" Box Text to Baby Pink */
-.url-box,
-.url-box strong,
-.url-box span,
-.url-box a {
-  color: #ffe6f2 !important;
-  text-shadow: 0 1px 2px rgba(74, 14, 41, 0.5);
-}
