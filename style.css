@@ -52,42 +52,13 @@ body {
 }
 
 .box {
-  position: relative;
-  background: rgba(255, 245, 250, 0.95);
-  border: 2px solid #ffb6db;
+  background: rgba(255, 245, 250, 0.94);
+  border: 3px solid #ffffff;
+  outline: 2px solid var(--hot-pink);
   border-radius: 12px;
   box-shadow: 0 0 18px rgba(255, 255, 255, 0.85), 0 6px 15px rgba(120, 0, 60, 0.35);
   margin-bottom: 20px;
   overflow: hidden;
-  padding: 0 18px; /* Leaves room on the left & right for the lace */
-}
-
-/* Left & Right Pink-Tinted Lace Strips */
-.box::before,
-.box::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 22px;
-  background-image: url('lace.png');
-  background-repeat: repeat-y;
-  background-size: 100% auto;
-  /* Turns dark grey mesh into soft bubblegum pink */
-  filter: sepia(100%) saturate(300%) hue-rotate(295deg) brightness(105%);
-  pointer-events: none;
-  z-index: 5;
-}
-
-/* Left Lace Strip (flipped so scallops face inward) */
-.box::before {
-  left: 0;
-  transform: scaleX(-1);
-}
-
-/* Right Lace Strip */
-.box::after {
-  right: 0;
 }
 
 /* Keeps the hot-pink header stretching cleanly across the top */
@@ -115,34 +86,48 @@ body {
 .window-controls { font-size: 11px; letter-spacing: 2px; }
 .box-content { padding: 14px; }
 
-/* White Lace Frame around Light Pink Box */
+/* Light Pink Box with White Lace Side Borders */
 .lace-box {
   position: relative;
   background-color: #ffe6f2 !important; /* Soft light pink background */
-  border: 14px solid transparent !important;
-  outline: none !important;
-  border-radius: 16px;
-  box-shadow: 0 0 18px rgba(255, 255, 255, 0.85), 0 6px 15px rgba(120, 0, 60, 0.35);
-  overflow: visible !important;
+  border: 2px solid #ffffff;
+  outline: 2px solid #ffb6db;
+  padding: 0 26px; /* Makes room on left & right for the lace */
+  overflow: hidden !important;
 }
 
-/* Crisp White Lace Overlay on the Border */
+/* White Lace Strips on Left & Right Edges */
+.lace-box::before,
 .lace-box::after {
   content: "";
   position: absolute;
-  inset: -14px; /* Sits directly on top of the 14px border */
-  border: 18px solid transparent;
-  border-image-source: url('lace.png');
-  border-image-slice: 33% fill; /* Prevents tiny squished repeats */
-  border-image-repeat: round;
-  filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255, 105, 180, 0.6)); /* Forces lace pure white */
+  top: 0;
+  bottom: 0;
+  width: 28px; /* Bigger, wider lace trim */
+  background-image: url('lace.png');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255, 105, 180, 0.5)); /* Pure white lace */
   pointer-events: none;
-  z-index: 10;
+  z-index: 5;
 }
 
-/* Keeps the hot-pink header tucked neatly inside the lace frame */
+/* Left Lace Strip (flipped so scallops face inward) */
+.lace-box::before {
+  left: 0;
+  transform: scaleX(-1);
+}
+
+/* Right Lace Strip */
+.lace-box::after {
+  right: 0;
+}
+
+/* Keeps the hot-pink header stretching cleanly across the top */
 .lace-box .box-header {
-  border-radius: 10px 10px 0 0;
+  margin: 0 -26px;
+  position: relative;
+  z-index: 6;
 }
 
 .profile-pic-wrap {
