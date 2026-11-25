@@ -78,51 +78,7 @@ body {
 .window-controls { font-size: 11px; letter-spacing: 2px; }
 .box-content { padding: 14px; }
 
-/* Light Pink Box with White Lace Inside Left & Right Borders */
-.lace-box {
-  position: relative;
-  background-color: #ffe6f2 !important;
-  border: 2px solid #ffffff !important;
-  outline: 2px solid #ffb6db !important;
-  padding: 0 26px !important; /* Pushes text inward so it never overlaps the lace */
-  overflow: hidden !important;
-}
 
-/* White Lace Strips Positioned Inside Left & Right Edges */
-.lace-box::before,
-.lace-box::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 90px; /* Wide enough to catch the lace in the middle of lace.png */
-  background-image: url('lace.png');
-  background-repeat: repeat-y;
-  background-position: center top;
-  background-size: 100% auto;
-  /* Brightens the grey mesh so the lace reads crisp white */
-  filter: brightness(1.35) contrast(1.1) drop-shadow(0 0 2px rgba(255, 105, 180, 0.5));
-  pointer-events: none;
-  z-index: 5;
-}
-
-/* Left Inside Lace Strip (flipped so scallops face inward toward your content) */
-.lace-box::before {
-  left: -32px;
-  transform: scaleX(-1);
-}
-
-/* Right Inside Lace Strip (scallops face inward toward your content) */
-.lace-box::after {
-  right: -32px;
-}
-
-/* Keeps the hot-pink header bar stretching edge-to-edge */
-.lace-box .box-header {
-  margin: 0 -26px;
-  position: relative;
-  z-index: 6;
-}
 
 .profile-pic-wrap {
   display: flex;
@@ -644,4 +600,49 @@ body {
   background: #fff0f8;
   border-radius: 6px;
   transform: translateX(3px);
+}
+/* Pastel Pink Box with Your Exact lace.png on Left & Right Inside Edges */
+.lace-box {
+  position: relative;
+  background-color: #ffb6db !important; /* Deeper pastel pink so white lace pops */
+  border: 3px solid #ffffff !important;
+  outline: 2px solid var(--hot-pink) !important;
+  padding: 0 36px !important;
+  overflow: hidden !important;
+}
+
+/* White Lace Strips Aligned to Left & Right Edges */
+.lace-box::before,
+.lace-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 280px;
+  background-image: url('lace.png');
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 100% auto;
+  /* Turns the grey mesh pure crisp white with a soft hot-pink outline */
+  filter: brightness(2) contrast(1.3) drop-shadow(0 0 2px #c7006e);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Left Edge Lace Strip */
+.lace-box::before {
+  left: -125px;
+  transform: scaleX(-1);
+}
+
+/* Right Edge Lace Strip */
+.lace-box::after {
+  right: -125px;
+}
+
+/* Keeps the hot-pink header stretching cleanly across the top */
+.lace-box .box-header {
+  margin: 0 -36px;
+  position: relative;
+  z-index: 6;
 }
