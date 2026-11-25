@@ -53,14 +53,15 @@ body {
 }
 
 .box {
-  background: rgba(148, 67, 103, 0.96); /* Dark Berry-Plum (#944367) */
+  background: rgba(184, 107, 138, 0.96); /* Deep Mauve-Plum (#b86b8a) */
   border: 3px solid #ffffff;
   outline: 2px solid var(--hot-pink);
   border-radius: 12px;
-  box-shadow: 0 0 18px rgba(255, 255, 255, 0.85), 0 6px 15px rgba(80, 0, 40, 0.55);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.85), 0 6px 15px rgba(80, 0, 40, 0.45);
   margin-bottom: 20px;
   overflow: hidden;
 }
+
 
 
 .box-header {
@@ -173,7 +174,7 @@ body {
   padding: 14px;
   text-align: center;
   margin-bottom: 20px;
-  background: linear-gradient(90deg, #944367, #7a3252, #944367);
+  background: linear-gradient(90deg, #b86b8a, #9e5673, #b86b8a);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
 }
 
@@ -563,15 +564,14 @@ body {
   padding: 3px;
   margin-bottom: 6px;
 }
-/* Dark Berry-Plum Current Rotation List */
+/* Deep Mauve-Plum Current Rotation List */
 .song-list {
-  background: rgba(110, 42, 73, 0.85);
+  background: rgba(145, 76, 104, 0.85);
   border: none;
   outline: none;
   border-radius: 10px;
   padding: 8px 10px;
 }
-
 .song-item {
   border-bottom: 1px dashed #ff85c2;
   padding: 7px 4px;
@@ -597,10 +597,11 @@ body {
 .song-artist {
   color: #ffcce6 !important;
 }
-/* Dark Berry-Plum Lace Box */
+
+/* Deep Mauve-Plum Lace Box */
 .lace-box {
   position: relative;
-  background-color: #944367 !important;
+  background-color: #b86b8a !important;
   border: 2px solid #ffffff !important;
   outline: 2px solid var(--hot-pink) !important;
   border-radius: 12px !important;
