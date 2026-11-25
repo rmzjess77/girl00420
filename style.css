@@ -15,14 +15,17 @@
 body {
   margin: 0;
   padding: 20px 10px;
-  background-color: #ff2a9d;
-  background-image: url('glitter.gif');
-  background-repeat: repeat;
+  background-color: #9e6b82; /* Matches the dusty mauve fallback color while loading */
+  background-image: url('glittr.gif'); /* Make sure this matches your exact filename */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   background-attachment: fixed;
-  color: #fff0f8; /* Crisp light text so it's readable on dark plum */
+  color: #fff0f8;
   font-family: 'Courier Prime', monospace;
   font-size: 14px;
 }
+
 
 
 
