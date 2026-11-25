@@ -84,37 +84,41 @@ body {
   background-color: #ffe6f2 !important;
   border: 2px solid #ffffff;
   outline: 2px solid #ffb6db;
-  padding: 0 28px;
+  padding: 0 30px; /* Leaves clean room on left & right for the lace */
   overflow: hidden !important;
 }
 
+/* White Lace Strips on Left & Right Edges */
 .lace-box::before,
 .lace-box::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 28px;
+  width: 30px;
   background-image: url('lace.png');
   background-repeat: repeat-y;
   background-size: 100% auto;
-  /* Removed brightness(0) so it doesn't erase your lace image */
-  filter: drop-shadow(0 0 2px rgba(255, 105, 180, 0.6));
+  /* Soft pink drop-shadow makes white lace stand out against light pink */
+  filter: drop-shadow(0 0 2px rgba(255, 20, 147, 0.55));
   pointer-events: none;
   z-index: 5;
 }
 
+/* Left Lace Strip (flipped so scallops face inward) */
 .lace-box::before {
   left: 0;
   transform: scaleX(-1);
 }
 
+/* Right Lace Strip */
 .lace-box::after {
   right: 0;
 }
 
+/* Keeps the hot-pink header stretching cleanly across the top */
 .lace-box .box-header {
-  margin: 0 -28px;
+  margin: 0 -30px;
   position: relative;
   z-index: 6;
 }
