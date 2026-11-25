@@ -52,7 +52,7 @@ body {
 }
 
 .box {
-  background: rgba(255, 245, 250, 0.94);
+  background: rgba(255, 194, 224, 0.95);
   border: 3px solid #ffffff;
   outline: 2px solid var(--hot-pink);
   border-radius: 12px;
@@ -60,6 +60,7 @@ body {
   margin-bottom: 20px;
   overflow: hidden;
 }
+
 
 .box-header {
   background: linear-gradient(180deg, #ff85c2 0%, #ff1493 50%, #cc0070 51%, #ff4da6 100%);
