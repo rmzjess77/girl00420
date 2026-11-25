@@ -52,7 +52,7 @@ body {
 }
 
 .box {
-  background: rgba(255, 194, 224, 0.95);
+  background: rgba(255, 179, 217, 0.96);
   border: 3px solid #ffffff;
   outline: 2px solid var(--hot-pink);
   border-radius: 12px;
@@ -172,9 +172,10 @@ body {
   padding: 14px;
   text-align: center;
   margin-bottom: 20px;
-  background: linear-gradient(90deg, #fff5fa, #ffe0f0, #fff5fa);
+  background: linear-gradient(90deg, #ffb3d9, #ff99cc, #ffb3d9);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
 }
+
 
 .network-banner h2 {
   margin: 0;
@@ -606,13 +607,14 @@ body {
 /* Continuous White Lace Frame Matching the Pastel Pink Background (Zero Cropping Needed) */
 .lace-box {
   position: relative;
-  background-color: #ffe6f2 !important; /* Matches the soft lace mesh seamlessly */
+  background-color: #ffb3d9 !important;
   border: 2px solid #ffffff !important;
   outline: 2px solid var(--hot-pink) !important;
   border-radius: 12px !important;
   padding: 0 14px 16px 14px !important;
   overflow: hidden !important;
 }
+
 
 /* Layered Left & Right Lace Strips (Overlaps the gap so it looks 100% continuous!) */
 .lace-box::before,
