@@ -78,43 +78,23 @@ body {
 .window-controls { font-size: 11px; letter-spacing: 2px; }
 .box-content { padding: 14px; }
 
-/* Light Pink Box with White Lace Side Borders */
+/* Light Pink Box with White Lace Border */
 .lace-box {
-  position: relative;
   background-color: #ffe6f2 !important;
-  border: 2px solid #ffffff;
-  outline: 2px solid #ffb6db;
-  padding: 0 30px; /* Leaves clean room on left & right for the lace */
-  overflow: hidden !important;
+  border: 20px solid transparent !important;
+  border-image-source: url('lace.png');
+  border-image-slice: 10;
+  border-image-repeat: round;
+  background-clip: padding-box !important;
+  outline: none !important;
+  padding: 0 !important;
 }
 
-/* White Lace Strips on Left & Right Edges */
 .lace-box::before,
 .lace-box::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 30px;
-  background-image: url('lace.png');
-  background-repeat: repeat-y;
-  background-size: 100% auto;
-  /* Soft pink drop-shadow makes white lace stand out against light pink */
-  filter: drop-shadow(0 0 2px rgba(255, 20, 147, 0.55));
-  pointer-events: none;
-  z-index: 5;
+  display: none !important;
 }
 
-/* Left Lace Strip (flipped so scallops face inward) */
-.lace-box::before {
-  left: 0;
-  transform: scaleX(-1);
-}
-
-/* Right Lace Strip */
-.lace-box::after {
-  right: 0;
-}
 
 /* Keeps the hot-pink header stretching cleanly across the top */
 .lace-box .box-header {
