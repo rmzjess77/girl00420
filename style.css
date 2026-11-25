@@ -3,9 +3,10 @@
 
 
 :root {
-  --hot-pink: #ff1493;
-  --bubblegum: #ff69b4;
+  --hot-pink: #9e3a68;   /* Velvety Berry-Plum accent */
+  --bubblegum: #c96b93;  /* Soft Rose-Mauve highlight */
 }
+
 
 * {
   box-sizing: border-box;
@@ -68,7 +69,7 @@ body {
 
 
 .box-header {
-  background: linear-gradient(180deg, #ff85c2 0%, #ff1493 50%, #cc0070 51%, #ff4da6 100%);
+  background: linear-gradient(180deg, #d982a6 0%, #9e3a68 50%, #7d2950 51%, #b85682 100%);
   color: #ffffff;
   padding: 7px 12px;
   font-family: 'Pixelify Sans', sans-serif;
@@ -78,8 +79,9 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #fff;
-  text-shadow: 1px 1px 2px #800040;
+  text-shadow: 1px 1px 2px #4a0e29;
 }
+
 
 .window-controls { font-size: 11px; letter-spacing: 2px; }
 .box-content { padding: 14px; }
@@ -406,7 +408,7 @@ body {
 
 .sticker-tag {
   display: inline-block;
-  background: linear-gradient(180deg, #ff85c2, #ff1493);
+  background: linear-gradient(180deg, #d982a6, #9e3a68);
   color: #fff;
   font-family: 'Pixelify Sans', sans-serif;
   font-weight: bold;
@@ -414,10 +416,11 @@ body {
   border-radius: 20px;
   transform: rotate(-3deg);
   border: 1.5px solid #fff;
-  box-shadow: 0 2px 5px rgba(255, 20, 147, 0.4);
+  box-shadow: 0 2px 5px rgba(74, 14, 41, 0.4);
   font-size: 12px;
   margin: 4px;
 }
+
 
 /* Cut-Out Bookshelf Stickers */
 .shelf-sticker {
