@@ -671,3 +671,8 @@ body {
   position: relative;
   z-index: 6;
 }
+/* Makes "About me:" and "my URL:" pop cleanly against the mauve box */
+.box-content p strong,
+.box-content a {
+  color: #ffe6f2;
+}
