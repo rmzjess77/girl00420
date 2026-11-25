@@ -19,10 +19,11 @@ body {
   background-image: url('glitter.gif');
   background-repeat: repeat;
   background-attachment: fixed;
-  color: #3a0024;
+  color: #fff0f8; /* Crisp light text so it's readable on dark plum */
   font-family: 'Courier Prime', monospace;
   font-size: 14px;
 }
+
 
 
 .marquee-bar {
@@ -52,11 +53,11 @@ body {
 }
 
 .box {
-  background: rgba(255, 179, 217, 0.96);
+  background: rgba(148, 67, 103, 0.96); /* Dark Berry-Plum (#944367) */
   border: 3px solid #ffffff;
   outline: 2px solid var(--hot-pink);
   border-radius: 12px;
-  box-shadow: 0 0 18px rgba(255, 255, 255, 0.85), 0 6px 15px rgba(120, 0, 60, 0.35);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.85), 0 6px 15px rgba(80, 0, 40, 0.55);
   margin-bottom: 20px;
   overflow: hidden;
 }
@@ -172,16 +173,15 @@ body {
   padding: 14px;
   text-align: center;
   margin-bottom: 20px;
-  background: linear-gradient(90deg, #ffb3d9, #ff99cc, #ffb3d9);
+  background: linear-gradient(90deg, #944367, #7a3252, #944367);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
 }
-
 
 .network-banner h2 {
   margin: 0;
   font-family: 'Pixelify Sans', sans-serif;
   font-size: 19px;
-  color: #c7006e;
+  color: #ffb6db;
 }
 
 /* Realistic 3-Tier Bookcase Frame */
@@ -550,22 +550,6 @@ body {
   margin-bottom: 5px;
 }
 
-.track-name {
-  font-weight: bold;
-  font-size: 13px;
-  color: #800040;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.artist-name {
-  font-size: 12px;
-  color: #c7006e;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 .fav-songs-header {
   font-family: 'Pixelify Sans', sans-serif;
@@ -579,9 +563,9 @@ body {
   padding: 3px;
   margin-bottom: 6px;
 }
-/* Clean Borderless Current Rotation List */
+/* Dark Berry-Plum Current Rotation List */
 .song-list {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(110, 42, 73, 0.85);
   border: none;
   outline: none;
   border-radius: 10px;
@@ -589,7 +573,7 @@ body {
 }
 
 .song-item {
-  border-bottom: 1px dashed #ff99cc;
+  border-bottom: 1px dashed #ff85c2;
   padding: 7px 4px;
   transition: transform 0.2s ease, background 0.2s ease;
 }
@@ -599,23 +583,30 @@ body {
 }
 
 .song-item:hover {
-  background: #fff0f8;
+  background: rgba(255, 133, 194, 0.2);
   border-radius: 6px;
   transform: translateX(3px);
 }
 
-/* Continuous White Lace Frame Matching the Pastel Pink Background (Zero Cropping Needed) */
+.track-name,
+.song-title {
+  color: #ffffff !important;
+}
+
+.artist-name,
+.song-artist {
+  color: #ffcce6 !important;
+}
+/* Dark Berry-Plum Lace Box */
 .lace-box {
   position: relative;
-  background-color: #ffb3d9 !important;
+  background-color: #944367 !important;
   border: 2px solid #ffffff !important;
   outline: 2px solid var(--hot-pink) !important;
   border-radius: 12px !important;
   padding: 0 14px 16px 14px !important;
   overflow: hidden !important;
 }
-
-
 /* Layered Left & Right Lace Strips (Overlaps the gap so it looks 100% continuous!) */
 .lace-box::before,
 .lace-box::after {
