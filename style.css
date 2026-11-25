@@ -602,7 +602,7 @@ body {
   transform: translateX(3px);
 }
 
-/* Smooth, Continuous White Lace Frame Matching the Pastel Pink Background */
+/* Continuous White Lace Frame Matching the Pastel Pink Background (Zero Cropping Needed) */
 .lace-box {
   position: relative;
   background-color: #ffe6f2 !important; /* Matches the soft lace mesh seamlessly */
@@ -613,7 +613,7 @@ body {
   overflow: hidden !important;
 }
 
-/* Smooth Left & Right Lace Strips (Scallops Facing Inward) */
+/* Layered Left & Right Lace Strips (Overlaps the gap so it looks 100% continuous!) */
 .lace-box::before,
 .lace-box::after {
   content: "";
@@ -622,27 +622,27 @@ body {
   top: 34px;
   bottom: 0;
   width: 110px;
-  background-image: url('lace.png');
-  background-repeat: repeat-y;
-  background-position: center top;
-  background-size: 100% auto; /* Natural aspect ratio once cropped = zero gaps */
+  background-image: url('lace.png'), url('lace.png');
+  background-repeat: repeat-y, repeat-y;
+  background-position: center 0px, center 120px; /* Second layer fills the empty gap! */
+  background-size: 100% 240px, 100% 240px;
   opacity: 0.92;
   pointer-events: none;
   z-index: 5;
 }
 
-/* Left Lace Strip (Scallops pointing right/inward) */
+/* Left Lace Strip (Scallops pointing inward) */
 .lace-box::before {
   left: -46px;
 }
 
-/* Right Lace Strip (Flipped so scallops point left/inward) */
+/* Right Lace Strip (Flipped so scallops point inward) */
 .lace-box::after {
   right: -46px;
   transform: scaleX(-1);
 }
 
-/* Bottom Lace Strip Touching the Very Bottom Edge */
+/* Layered Bottom Lace Strip Touching the Very Bottom Edge */
 .lace-box .box-content {
   position: static;
 }
@@ -653,12 +653,12 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -49px; /* Sits flush against the bottom border */
+  bottom: -49px; /* Sits flush against the bottom edge */
   height: 110px;
-  background-image: url('lace-bottom.png');
-  background-repeat: repeat-x;
-  background-position: left center;
-  background-size: auto 100%;
+  background-image: url('lace-bottom.png'), url('lace-bottom.png');
+  background-repeat: repeat-x, repeat-x;
+  background-position: 0px center, 120px center; /* Second layer fills the horizontal gap! */
+  background-size: 240px 100%, 240px 100%;
   opacity: 0.92;
   pointer-events: none;
   z-index: 5;
@@ -670,4 +670,3 @@ body {
   position: relative;
   z-index: 6;
 }
-
