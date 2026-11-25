@@ -719,3 +719,78 @@ body {
   color: #7d2950 !important;
   border-color: var(--hot-pink) !important;
 }
+/* === BABY PINK ACCENTS TO MATCH YOUR POLKA-DOT MOOD BOX === */
+
+/* 1. Soft Baby-Pink Outlines & Inner Glow on All Boxes */
+.box,
+.lace-box {
+  border: 3px solid #ffffff !important;
+  outline: 2.5px solid #ffb6db !important; /* Baby-pink outer border */
+  box-shadow: 0 0 18px rgba(255, 214, 235, 0.9), 0 6px 15px rgba(80, 0, 40, 0.4) !important;
+}
+
+/* 2. Glossy Baby-Pink & Rose Window Headers */
+.box-header {
+  background: linear-gradient(180deg, #ffe6f2 0%, #ff99cc 48%, #e06c9f 52%, #ffb6db 100%) !important;
+  color: #6b143b !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85) !important;
+  border-bottom: 2px solid #ffffff !important;
+}
+
+/* 3. Baby-Pink Top Marquee & Moon Banner */
+.marquee-bar {
+  background: #fff5fa !important;
+  border: 2px solid #ffb6db !important;
+  outline: 2px solid #ffffff !important;
+  color: #b84b7a !important;
+}
+
+.network-banner {
+  background: linear-gradient(90deg, #ffd6eb, #ffb6db, #ffd6eb) !important;
+  border: 3px double #ffffff !important;
+  outline: 2px solid #ffb6db !important;
+}
+
+.network-banner h2 {
+  color: #9e3a68 !important;
+}
+
+/* 4. Baby-Pink Pill Tags (moon girl, sunshine girl, etc.) */
+.sticker-tag {
+  background: linear-gradient(180deg, #fff0f8, #ffb6db) !important;
+  color: #7d2950 !important;
+  border: 1.5px solid #ffffff !important;
+  box-shadow: 0 2px 6px rgba(255, 182, 219, 0.6) !important;
+}
+
+/* 5. Baby-Pink Contact Buttons & Bookshelf Labels */
+.contact-btn {
+  background: #fff5fa !important;
+  border: 2px dotted #ff99cc !important; /* Matches the dotted vibe of your mood box! */
+  color: #8c2d59 !important;
+}
+
+.contact-btn:hover {
+  background: #ffb6db !important;
+  color: #ffffff !important;
+}
+
+.shelf-label {
+  background: #ffd6eb !important;
+  color: #7d2950 !important;
+  border: 1.5px solid #ffffff !important;
+}
+
+/* 6. Baby-Pink Text Highlights for Profile Details & Links */
+.profile-name {
+  color: #ffe6f2 !important;
+  text-shadow: 2px 2px 0px #9e3a68, 0 0 10px #ffb6db !important;
+}
+
+.profile-details,
+.url-box,
+.url-box strong,
+.box-content h4,
+.box-content p strong {
+  color: #ffe6f2 !important;
+}
