@@ -719,3 +719,11 @@ body {
   color: #7d2950 !important;
   border-color: var(--hot-pink) !important;
 }
+/* Soft Blush-Pink Background Blended Under the Polka-Dot GIF */
+.mood-box {
+  background-color: #ffd6eb !important;
+  background-image: url('mood.gif') !important;
+  background-blend-mode: multiply !important;
+  color: #5c1637 !important;
+  border-color: var(--hot-pink) !important;
+}
