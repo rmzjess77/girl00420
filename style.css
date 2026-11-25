@@ -601,71 +601,70 @@ body {
   border-radius: 6px;
   transform: translateX(3px);
 }
-/* Dainty Light-Pink Box with Smaller White Lace on Left, Right & Bottom */
+
+/* Smooth, Detailed White Lace Frame on Left, Right & Bottom */
 .lace-box {
   position: relative;
-  background-color: #ffe6f2 !important; /* Softer, lighter pastel pink */
+  background-color: #fff0f8 !important;
   border: 2px solid #ffffff !important;
-  outline: 2px solid #ff85c2 !important;
-  border-radius: 14px !important;
-  padding: 0 20px 22px 20px !important; /* Less boxy padding, leaves room at bottom */
+  outline: 2px solid var(--hot-pink) !important;
+  border-radius: 12px !important;
+  padding: 0 14px 16px 14px !important; /* Slim, non-boxy padding */
   overflow: hidden !important;
 }
 
-/* Smaller, Delicately Scaled Left & Right Lace Strips */
+/* Smooth Left & Right Lace Strips (No harsh filters) */
 .lace-box::before,
 .lace-box::after {
   content: "";
   display: block !important;
   position: absolute;
-  top: 0;
+  top: 34px; /* Starts neatly right below the hot-pink header */
   bottom: 0;
-  width: 140px; /* Half the size so the lace is dainty and detailed */
+  width: 110px;
   background-image: url('lace.png');
   background-repeat: repeat-y;
   background-position: center top;
-  background-size: 100% auto;
-  filter: brightness(2) contrast(1.2) drop-shadow(0 0 1.5px rgba(255, 20, 147, 0.45));
+  background-size: 100% 240px; /* Keeps lace smooth and prevents vertical gaps */
+  opacity: 0.95;
   pointer-events: none;
   z-index: 5;
 }
 
 .lace-box::before {
-  left: -62px;
+  left: -46px;
   transform: scaleX(-1);
 }
 
 .lace-box::after {
-  right: -62px;
+  right: -46px;
 }
 
-/* Matching Bottom White Lace Strip */
+/* Smooth Bottom Lace Strip Flush at the Very Bottom */
 .lace-box .box-content {
-  position: relative;
+  position: static; /* Anchors ::after to the outer .lace-box instead of the middle */
 }
 
 .lace-box .box-content::after {
   content: "";
+  display: block !important;
   position: absolute;
-  left: 50%;
-  bottom: -95px;
-  width: 140px;
-  height: 220px;
-  background-image: url('lace.png');
-  background-repeat: repeat-y;
-  background-position: center top;
-  background-size: 100% auto;
-  /* Rotates your vertical lace strip 90 degrees so it runs horizontally along the bottom */
-  transform: translateX(-50%) rotate(-90deg);
-  transform-origin: center center;
-  filter: brightness(2) contrast(1.2) drop-shadow(0 0 1.5px rgba(255, 20, 147, 0.45));
+  left: 0;
+  right: 0;
+  bottom: -44px; /* Sits flush along the very bottom edge */
+  height: 110px;
+  background-image: url('lace-bottom.png');
+  background-repeat: repeat-x;
+  background-position: left center;
+  background-size: 240px 100%;
+  opacity: 0.95;
   pointer-events: none;
   z-index: 5;
 }
 
 /* Keeps the hot-pink header stretching cleanly across the top */
 .lace-box .box-header {
-  margin: 0 -20px;
+  margin: 0 -14px;
   position: relative;
   z-index: 6;
 }
