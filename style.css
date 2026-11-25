@@ -612,9 +612,11 @@ body {
 }
 
 /* White Lace Strips Aligned to Left & Right Edges */
+/* White Lace Strips Aligned to Left & Right Edges */
 .lace-box::before,
 .lace-box::after {
   content: "";
+  display: block !important;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -623,11 +625,11 @@ body {
   background-repeat: repeat-y;
   background-position: center top;
   background-size: 100% auto;
-  /* Turns the grey mesh pure crisp white with a soft hot-pink outline */
   filter: brightness(2) contrast(1.3) drop-shadow(0 0 2px #c7006e);
   pointer-events: none;
   z-index: 5;
 }
+
 
 /* Left Edge Lace Strip */
 .lace-box::before {
