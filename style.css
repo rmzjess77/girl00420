@@ -676,3 +676,46 @@ body {
 .box-content a {
   color: #ffe6f2;
 }
+/* 1. Soften Top Marquee Bar to Match the Mauve Aesthetic */
+.marquee-bar {
+  background: rgba(255, 230, 242, 0.92) !important;
+  color: #7d2950 !important;
+  border-color: var(--hot-pink) !important;
+}
+
+/* 2. Fix Invisible Contact Buttons (Berry-Plum Text on Soft Pastel Pink) */
+.contact-btn {
+  background: linear-gradient(180deg, #fff5fa, #ffd6eb) !important;
+  color: #7d2950 !important;
+  border: 1.5px solid var(--hot-pink) !important;
+}
+
+.contact-btn:hover {
+  background: #9e3a68 !important;
+  color: #ffffff !important;
+}
+
+/* 3. Brighten Dark Maroon Labels ("About me:", "my URL:", "HTX / Cyberspace") */
+.profile-details,
+.url-box,
+.url-box strong,
+.box-content h4,
+.box-content p strong {
+  color: #ffe6f2 !important;
+}
+
+/* 4. Match the Record Player Turntable to the New Berry-Plum Palette */
+.record-player {
+  background: linear-gradient(135deg, #a65878 0%, #8f4765 100%) !important;
+  border-color: #ffd6eb !important;
+}
+
+.turntable {
+  background: #d982a6 !important;
+}
+
+.fav-songs-header {
+  background: #ffe6f2 !important;
+  color: #7d2950 !important;
+  border-color: var(--hot-pink) !important;
+}
