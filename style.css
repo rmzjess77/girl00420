@@ -602,47 +602,49 @@ body {
   transform: translateX(3px);
 }
 
-/* Smooth, Detailed White Lace Frame on Left, Right & Bottom */
+/* Smooth, Continuous White Lace Frame Matching the Pastel Pink Background */
 .lace-box {
   position: relative;
-  background-color: #fff0f8 !important;
+  background-color: #ffe6f2 !important; /* Matches the soft lace mesh seamlessly */
   border: 2px solid #ffffff !important;
   outline: 2px solid var(--hot-pink) !important;
   border-radius: 12px !important;
-  padding: 0 14px 16px 14px !important; /* Slim, non-boxy padding */
+  padding: 0 14px 16px 14px !important;
   overflow: hidden !important;
 }
 
-/* Smooth Left & Right Lace Strips (No harsh filters) */
+/* Smooth Left & Right Lace Strips (Scallops Facing Inward) */
 .lace-box::before,
 .lace-box::after {
   content: "";
   display: block !important;
   position: absolute;
-  top: 34px; /* Starts neatly right below the hot-pink header */
+  top: 34px;
   bottom: 0;
   width: 110px;
   background-image: url('lace.png');
   background-repeat: repeat-y;
   background-position: center top;
-  background-size: 100% 240px; /* Keeps lace smooth and prevents vertical gaps */
-  opacity: 0.95;
+  background-size: 100% auto; /* Natural aspect ratio once cropped = zero gaps */
+  opacity: 0.92;
   pointer-events: none;
   z-index: 5;
 }
 
+/* Left Lace Strip (Scallops pointing right/inward) */
 .lace-box::before {
   left: -46px;
+}
+
+/* Right Lace Strip (Flipped so scallops point left/inward) */
+.lace-box::after {
+  right: -46px;
   transform: scaleX(-1);
 }
 
-.lace-box::after {
-  right: -46px;
-}
-
-/* Smooth Bottom Lace Strip Flush at the Very Bottom */
+/* Bottom Lace Strip Touching the Very Bottom Edge */
 .lace-box .box-content {
-  position: static; /* Anchors ::after to the outer .lace-box instead of the middle */
+  position: static;
 }
 
 .lace-box .box-content::after {
@@ -651,13 +653,13 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -44px; /* Sits flush along the very bottom edge */
+  bottom: -49px; /* Sits flush against the bottom border */
   height: 110px;
   background-image: url('lace-bottom.png');
   background-repeat: repeat-x;
   background-position: left center;
-  background-size: 240px 100%;
-  opacity: 0.95;
+  background-size: auto 100%;
+  opacity: 0.92;
   pointer-events: none;
   z-index: 5;
 }
@@ -668,3 +670,4 @@ body {
   position: relative;
   z-index: 6;
 }
+
