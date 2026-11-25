@@ -626,7 +626,6 @@ body {
   background-repeat: repeat-y, repeat-y;
   background-position: center 0px, center 120px; /* Second layer fills the empty gap! */
   background-size: 100% 240px, 100% 240px;
-  filter: sepia(0.35) hue-rotate(295deg) saturate(1.4) brightness(1.06);
   opacity: 0.92;
   pointer-events: none;
   z-index: 5;
@@ -660,7 +659,6 @@ body {
   background-repeat: repeat-x, repeat-x;
   background-position: 0px center, 120px center; /* Second layer fills the horizontal gap! */
   background-size: 240px 100%, 240px 100%;
-  filter: sepia(0.35) hue-rotate(295deg) saturate(1.4) brightness(1.06);
   opacity: 0.92;
   pointer-events: none;
   z-index: 5;
