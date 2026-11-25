@@ -455,24 +455,24 @@ body {
 }
 .turntable {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 195px;
+  height: 195px;
   flex-shrink: 0;
   background: #ff85c2;
-  border-radius: 10px;
-  border: 2px solid #ffffff;
-  outline: 1.5px solid var(--hot-pink);
+  border-radius: 16px;
+  border: 3px solid #ffffff;
+  outline: 2px solid var(--hot-pink);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 0 8px rgba(128, 0, 64, 0.35);
+  box-shadow: inset 0 0 12px rgba(128, 0, 64, 0.35);
 }
 
-/* Glossy Black/Pink Vinyl Disc */
+/* Bigger Glossy Black/Pink Vinyl Disc */
 .vinyl-disc {
   position: relative;
-  width: 96px;
-  height: 96px;
+  width: 162px;
+  height: 162px;
   border-radius: 50%;
   background: repeating-radial-gradient(
     #1f0010 0px,
@@ -483,9 +483,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-
 .vinyl-disc.spinning {
   animation: spinRecord 4s linear infinite;
 }
@@ -497,8 +496,8 @@ body {
 
 /* Album Art Center Label */
 #album-art {
-  width: 45px;
-  height: 45px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #ff69b4;
@@ -506,20 +505,21 @@ body {
 
 .vinyl-hole {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   background: #fff0f8;
   border-radius: 50%;
   border: 1px solid #800040;
 }
 
-/* Silver/Pink Tonearm */
+
+/* Scaled Silver/Pink Tonearm */
 .tonearm {
   position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 6px;
-  height: 50px;
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 86px;
   background: linear-gradient(90deg, #ffffff, #ffb6db, #cc0070);
   border-radius: 4px;
   transform-origin: top center;
