@@ -845,20 +845,25 @@ body {
   pointer-events: none;
 }
 
+/* 1. Shrinks @peace slightly so the "e" doesn't get cut off on the right */
 .small-art {
-  font-size: 10px;
+  font-size: 7.5px;
   text-align: center;
+  margin-top: 8px;
 }
 
+/* 2. Scales down the tall bow/design under Cinema so the full width fits */
 .divider-art {
-  font-size: 10.5px;
+  font-size: 7px;
   text-align: center;
-  color: #ffd6eb;
+  color: #ffe6f2;
   margin-top: 10px;
 }
 
+/* 3. Makes the lotus flower wider and fuller inside the blog box */
 .blog-art {
-  font-size: 8px;
+  font-size: 10px;
+  letter-spacing: 1px;
   text-align: center;
   margin-top: 8px;
 }
