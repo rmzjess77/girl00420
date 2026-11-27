@@ -832,38 +832,38 @@ body {
   color: #ffffff;
   transform: translateY(-50%) scale(1.25);
 }
-/* Braille & ASCII Text Art Styling */
+
+/* Braille & ASCII Text Art Sizing & Alignment */
 .ascii-art {
+  display: block;
   font-family: 'Courier Prime', monospace;
-  color: #ffe6f2;
+  color: #fff5fa;
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
   line-height: 0.92;
   letter-spacing: 0px;
-  margin: 10px 0 4px 0;
-  overflow: hidden;
+  margin: 10px auto 4px auto;
+  overflow: visible;
   user-select: none;
   pointer-events: none;
+  width: fit-content;
 }
 
-/* 1. Shrinks @peace slightly so the "e" doesn't get cut off on the right */
+/* 1. Fits the full "@peace" banner cleanly without cutting off the "e" */
 .small-art {
-  font-size: 7.5px;
-  text-align: center;
-  margin-top: 8px;
+  font-size: 6.2px;
 }
 
-/* 2. Scales down the tall bow/design under Cinema so the full width fits */
+/* 2. Fits the full kitten/angel art cleanly inside the Contacting box */
 .divider-art {
-  font-size: 7px;
-  text-align: center;
+  font-size: 5.5px;
   color: #ffe6f2;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
-/* 3. Makes the lotus flower wider and fuller inside the blog box */
+/* 3. Scales the lotus flower smoothly inside girl00420's blogs */
 .blog-art {
-  font-size: 10px;
-  letter-spacing: 1px;
-  text-align: center;
+  font-size: 8.8px;
+  letter-spacing: 0.5px;
   margin-top: 8px;
 }
+
